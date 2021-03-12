@@ -1,6 +1,7 @@
 files=`pwd`
 rails new $1 -d=postgresql --skip-coffee -m railway.rb
-cd $1
+mv $1 applications
+cd applications/$1
 cp -r $files/package.json .
 cp -r $files/db/seeds.rb db
 cp -r $files/config/routes.rb config
